@@ -11,7 +11,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.easychat.model.UserModel;
-import com.example.easychat.utils.AndroidUtil;
 import com.example.easychat.utils.FirebaseUtil;
 
 public class SplashActivity extends AppCompatActivity {
@@ -38,11 +37,6 @@ public class SplashActivity extends AppCompatActivity {
                             Intent mainIntent=new Intent(this,MainActivity.class);
                             mainIntent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                             startActivity(mainIntent);
-
-                            Intent intent = new Intent(this,ChatActivity.class);
-                            AndroidUtil.passUserModelAsIntent(intent, model);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
                             finish();
                         }
 

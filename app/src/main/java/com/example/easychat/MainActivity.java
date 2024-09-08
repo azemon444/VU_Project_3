@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ChatFragment chatFragment;
     ProfileFragment profileFragment;
 
-    MainActivity2Fragment mainActivity2;
+
 
 
 
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         chatFragment = new ChatFragment();
         profileFragment = new ProfileFragment();
-        mainActivity2 = new MainActivity2Fragment();
 
 
 
@@ -56,15 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout, chatFragment).commit();
 
             }
-            if(item.getItemId()==R.id.menu_ai) {
 
-                if(isConnected())
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout, mainActivity2).commit();
-                else
-                    Toast.makeText(getApplicationContext(),"NO INTERNET",Toast.LENGTH_SHORT).show();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout, mainActivity2).commit();
-
-            }
 
             if(item.getItemId()==R.id.menu_profile) {
 
